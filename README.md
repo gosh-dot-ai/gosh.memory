@@ -97,7 +97,7 @@ Memory should be universal — it should support all types of human content.
 ## Quick start
 
 ```bash
-pip install -e .
+uv tool install gosh-memory --force --from git+https://github.com/gosh-dot-ai/gosh.memory
 gosh-memory start --data-dir ./data
 ```
 

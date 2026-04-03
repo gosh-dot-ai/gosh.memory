@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gosh-memory"
+version = "0.1.0"
+description = "Semantic memory MCP server for AI agents (gosh.memory)"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { file = "LICENSE" }
+authors = [{ name = "GOSH" }]
+dependencies = [
+    "mcp>=1.0",
+    "uvicorn[standard]>=0.27",
+    "starlette>=0.37",
+    "numpy>=1.26",
+    "python-dateutil>=2.8",
+    "cftime>=1.6",
+    "openai>=1.40",
+    "anthropic>=0.34",
+    "google-generativeai>=0.8",
+    "cryptography>=42",
+    "simplemma>=1.0",
+    "sentence-transformers>=3.0",
+    "pysqlcipher3>=1.2",
+]
+
+[project.scripts]
+gosh-memory = "src.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "/src",
+    "/README.md",
+    "/pyproject.toml",
+]
