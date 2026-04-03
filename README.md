@@ -103,6 +103,14 @@ gosh-memory start --data-dir ./data
 
 Server runs at `http://127.0.0.1:8765`. Token auto-generated at `~/.gosh-memory/token`.
 
+
+Optional encryption is available by setting `GOSH_MEMORY_ENCRYPTION_KEY` (hex), which enables AES for SQLCipher-backed SQLite for `.sqlite3` files when the `pysqlcipher3` extra and system SQLCipher libraries are installed:
+
+```bash
+sudo apt install libsqlcipher-dev
+uv tool install 'gosh-memory[sqlcipher]' --force --from git+https://github.com/gosh-dot-ai/gosh.memory
+```
+
 ---
 
 ## Setup
