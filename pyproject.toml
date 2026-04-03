@@ -23,11 +23,15 @@ dependencies = [
     "cryptography>=42",
     "simplemma>=1.0",
     "sentence-transformers>=3.0",
-    "pysqlcipher3>=1.2",
 ]
 
 [project.scripts]
 gosh-memory = "src.cli:main"
+
+# pysqlcipher3 has no wheels; it links to libsqlcipher and needs headers (e.g. libsqlcipher-dev).
+# Install when you use encrypted SQLite: uv tool install 'gosh-memory[sqlcipher]' --from ...
+[project.optional-dependencies]
+sqlcipher = ["pysqlcipher3>=1.2"]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
