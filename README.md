@@ -65,7 +65,7 @@ MAL is the autoresearch system that continuously improves the memory pipeline us
 
 When MAL identifies a problem that requires new code, it emits a task to `agent_id="coding"` via courier. If a coding agent exists in the swarm, it picks up the task and writes the fix.
 
-MAL is optional and disabled by default. See [MAL documentation](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/MEMORY-ADAPTATION-LOOP.md).
+MAL is optional and disabled by default. See [MAL documentation](https://github.com/gosh-dot-ai/gosh.docs/blob/main/MEMORY-ADAPTATION-LOOP.md).
 
 ---
 
@@ -73,7 +73,7 @@ MAL is optional and disabled by default. See [MAL documentation](https://github.
 
 We run all benchmarks on the same production pipeline, in parallel, through one memory server instance. No special benchmark-only code paths. Cross-contamination between parallel workloads: **< 1.5%**.
 
-[Benchmark results and methodology](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/BENCHMARKS.md)
+[Benchmark results and methodology](https://github.com/gosh-dot-ai/gosh.docs/blob/main/BENCHMARKS.md)
 
 ---
 
@@ -109,7 +109,7 @@ Server runs at `http://127.0.0.1:8765`. Token auto-generated at `~/.gosh-memory/
 
 ### gosh.cli
 
-Rust orchestrator for gosh.ai — manages memory and agent services, secrets, and provides CLI commands for all operations. [Full setup guide](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/SETUP.md#mode-1-harness--full-stack-via-goshcli)
+Rust orchestrator for gosh.ai — manages memory and agent services, secrets, and provides CLI commands for all operations. [Full setup guide](https://github.com/gosh-dot-ai/gosh.docs/blob/main/SETUP.md#mode-1-harness--full-stack-via-goshcli)
 
 ### Claude Code / Codex CLI / Gemini CLI
 
@@ -122,7 +122,7 @@ Connect gosh.memory as an MCP tool server to your AI assistant. Each has a short
 
 ### Standalone MCP server
 
-Run gosh.memory directly without gosh.cli. For custom integrations, testing, or embedding into your own stack. [Standalone setup](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/SETUP.md#mode-2-standalone--mcp-server-directly)
+Run gosh.memory directly without gosh.cli. For custom integrations, testing, or embedding into your own stack. [Standalone setup](https://github.com/gosh-dot-ai/gosh.docs/blob/main/SETUP.md#mode-2-standalone--mcp-server-directly)
 
 ---
 
@@ -142,12 +142,12 @@ The server exposes 20+ tools: `memory_store`, `memory_recall`, `memory_ask`, `me
 
 | Document | What it covers |
 |----------|---------------|
-| [Setup](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/SETUP.md) | Installation, configuration, all deployment modes |
-| [Memory System](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/MEMORY-SYSTEM.md) | How extraction, retrieval, complexity routing, and inference work |
-| [Benchmarks](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/BENCHMARKS.md) | Benchmark suite, scores, methodology |
-| [MAL](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/MEMORY-ADAPTATION-LOOP.md) | Autoresearch adaptation loop |
-| [Telemetry](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/TELEMETRY-CONTRACT.md) | All telemetry fields for recall, ask, stats, agent |
-| [Architecture](https://github.com/gosh-dot-ai/gosh.docs/blob/dev/ARCHITECTURE.md) | System components and data flow |
+| [Setup](https://github.com/gosh-dot-ai/gosh.docs/blob/main/SETUP.md) | Installation, configuration, all deployment modes |
+| [Memory System](https://github.com/gosh-dot-ai/gosh.docs/blob/main/MEMORY-SYSTEM.md) | How extraction, retrieval, complexity routing, and inference work |
+| [Benchmarks](https://github.com/gosh-dot-ai/gosh.docs/blob/main/BENCHMARKS.md) | Benchmark suite, scores, methodology |
+| [MAL](https://github.com/gosh-dot-ai/gosh.docs/blob/main/MEMORY-ADAPTATION-LOOP.md) | Autoresearch adaptation loop |
+| [Telemetry](https://github.com/gosh-dot-ai/gosh.docs/blob/main/TELEMETRY-CONTRACT.md) | All telemetry fields for recall, ask, stats, agent |
+| [Architecture](https://github.com/gosh-dot-ai/gosh.docs/blob/main/ARCHITECTURE.md) | System components and data flow |
 
 ---
 
